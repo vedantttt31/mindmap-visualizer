@@ -1,0 +1,179 @@
+{
+  "id": "root",
+  "label": "Vitamins in Human Body",
+
+  "shortSummary": "Essential micronutrients required for normal body functions.",
+  "longSummary": "Vitamins are organic micronutrients that the human body requires in small quantities to function properly. They play a critical role in growth, metabolism, immunity, tissue repair, and regulation of biochemical processes. Since the body cannot synthesize most vitamins in sufficient amounts, they must be obtained through diet, sunlight, or supplementation to maintain overall health and prevent disease.",
+
+  "children": [
+    {
+      "id": "roles",
+      "label": "Key Bodily Roles",
+
+      "shortSummary": "Support vital biological and metabolic processes.",
+      "longSummary": "Vitamins are involved in almost every major physiological function of the human body. They act as coenzymes in metabolic reactions, support immune defense mechanisms, protect cells from oxidative damage, and assist in growth and tissue maintenance. Without adequate vitamin intake, many essential biological processes become inefficient, leading to fatigue, illness, and long-term health complications.",
+
+      "children": [
+        {
+          "id": "metabolism",
+          "label": "Energy Metabolism",
+
+          "shortSummary": "Help convert food into usable energy.",
+          "longSummary": "Energy metabolism depends heavily on B-complex vitamins, which act as coenzymes in carbohydrate, protein, and fat metabolism. These vitamins assist enzymes in breaking down food molecules to release energy required for cellular activities. A deficiency can result in low energy levels, weakness, poor concentration, and impaired physical and mental performance."
+        },
+        {
+          "id": "immunity",
+          "label": "Immune Support",
+
+          "shortSummary": "Strengthen the body’s defense system.",
+          "longSummary": "Vitamins such as C, D, and A play a crucial role in maintaining a strong immune system. They enhance the production and function of immune cells, improve resistance to infections, and reduce inflammation. Adequate vitamin intake helps the body fight pathogens more effectively and supports faster recovery from illness."
+        },
+        {
+          "id": "antioxidant",
+          "label": "Antioxidant Protection",
+
+          "shortSummary": "Protect cells from oxidative damage.",
+          "longSummary": "Antioxidant vitamins like A, C, and E help neutralize harmful free radicals produced during normal metabolism and environmental exposure. By reducing oxidative stress, these vitamins protect cells, tissues, and organs from damage. This protection lowers the risk of chronic diseases such as cardiovascular disorders, cancer, and premature aging."
+        }
+      ]
+    },
+
+    {
+      "id": "sources",
+      "label": "Dietary Sources",
+
+      "shortSummary": "Obtained mainly from food and sunlight.",
+      "longSummary": "Vitamins are primarily acquired through a balanced diet that includes fruits, vegetables, grains, dairy, meat, and fortified foods. Some vitamins, such as vitamin D, are synthesized in the body through sunlight exposure. A diverse diet ensures adequate intake of all essential vitamins and reduces the risk of nutritional deficiencies.",
+
+      "children": [
+        {
+          "id": "fruits",
+          "label": "Fruits & Vegetables",
+
+          "shortSummary": "Major natural vitamin sources.",
+          "longSummary": "Fruits and vegetables are rich in vitamins such as A, C, folate, and various antioxidants. They also provide dietary fiber and phytochemicals that support digestion and overall health. Regular consumption helps boost immunity, improve skin health, and reduce the risk of chronic diseases."
+        },
+        {
+          "id": "meat",
+          "label": "Meat & Dairy",
+
+          "shortSummary": "Provide essential fat-soluble and B vitamins.",
+          "longSummary": "Meat, fish, eggs, and dairy products are important sources of vitamins such as B12, A, and D. These foods support nerve function, bone health, and red blood cell formation. Vitamin B12, in particular, is mainly found in animal-based foods and is essential for proper neurological function."
+        },
+        {
+          "id": "grains",
+          "label": "Grains & Nuts",
+
+          "shortSummary": "Contain B-complex vitamins and vitamin E.",
+          "longSummary": "Whole grains, nuts, and seeds provide B-complex vitamins that support metabolism and nervous system function. They are also good sources of vitamin E, which acts as an antioxidant. Including these foods in the diet helps maintain steady energy levels and promotes long-term cardiovascular health."
+        },
+        {
+          "id": "sunlight",
+          "label": "Sunlight & Fortified Foods",
+
+          "shortSummary": "Enable vitamin D synthesis.",
+          "longSummary": "Exposure to sunlight allows the skin to synthesize vitamin D, which is essential for calcium absorption and bone strength. Fortified foods such as milk and cereals help individuals meet their vitamin D requirements, especially in regions with limited sun exposure or during winter months."
+        }
+      ]
+    },
+
+    {
+      "id": "health",
+      "label": "Health Impact & Balance",
+
+      "shortSummary": "Both low and high intake can cause harm.",
+      "longSummary": "Maintaining proper vitamin balance is essential for good health. Both deficiency and excess intake can lead to serious health problems. While insufficient vitamins can impair body functions and cause diseases, excessive consumption—especially through supplements—may result in toxicity. A balanced diet remains the safest and most effective way to meet vitamin requirements.",
+
+      "children": [
+        {
+          "id": "deficiency",
+          "label": "Deficiency",
+
+          "shortSummary": "Lack of vitamins leads to diseases.",
+          "longSummary": "Vitamin deficiency occurs when the body does not receive adequate amounts of essential vitamins. This can lead to conditions such as scurvy, rickets, anemia, and night blindness. Deficiencies weaken immunity, reduce energy levels, and impair growth and development, especially in children and elderly individuals."
+        },
+        {
+          "id": "excess",
+          "label": "Excess",
+
+          "shortSummary": "Overconsumption may cause toxicity.",
+          "longSummary": "Excessive intake of vitamins, particularly fat-soluble vitamins like A, D, E, and K, can accumulate in the body and cause toxicity. Symptoms may include nausea, organ damage, and neurological issues. This highlights the importance of avoiding unnecessary supplementation without medical guidance."
+        }
+      ]
+    },
+
+    {
+      "id": "classification",
+      "label": "Vitamin Classification",
+
+      "shortSummary": "Grouped by solubility in the body.",
+      "longSummary": "Vitamins are classified based on their solubility into water-soluble and fat-soluble categories. This classification determines how they are absorbed, stored, and excreted by the body. Understanding this distinction helps explain why some vitamins must be consumed daily, while others can be stored for longer periods.",
+
+      "children": [
+        {
+          "id": "water",
+          "label": "Water-Soluble Vitamins",
+
+          "shortSummary": "Need regular intake.",
+          "longSummary": "Water-soluble vitamins dissolve in water and are not stored in significant amounts in the body. Excess quantities are excreted through urine, making daily intake necessary. These vitamins primarily support metabolism, energy production, and nervous system function.",
+
+          "children": [
+            {
+              "id": "vitc",
+              "label": "Vitamin C",
+
+              "shortSummary": "Supports immunity and healing.",
+              "longSummary": "Vitamin C is essential for collagen synthesis, wound healing, and immune function. It also acts as a powerful antioxidant, protecting cells from damage. Regular intake helps improve resistance to infections and supports healthy skin, blood vessels, and connective tissues."
+            },
+            {
+              "id": "vitb",
+              "label": "B-Complex Vitamins",
+
+              "shortSummary": "Support metabolism and nerves.",
+              "longSummary": "B-complex vitamins include several related vitamins that work together to support energy metabolism, brain function, and red blood cell formation. They play a key role in converting food into energy and maintaining a healthy nervous system. Deficiency can lead to fatigue, anemia, and neurological problems."
+            }
+          ]
+        },
+
+        {
+          "id": "fat",
+          "label": "Fat-Soluble Vitamins",
+
+          "shortSummary": "Stored in body fat and liver.",
+          "longSummary": "Fat-soluble vitamins dissolve in fats and oils and are stored in the body’s fatty tissues and liver. Because they are retained for longer periods, excessive intake can increase the risk of toxicity. These vitamins are crucial for vision, bone health, antioxidant protection, and blood clotting.",
+
+          "children": [
+            {
+              "id": "vita",
+              "label": "Vitamin A",
+
+              "shortSummary": "Essential for vision and immunity.",
+              "longSummary": "Vitamin A plays a vital role in maintaining healthy vision, skin, and immune function. It is particularly important for night vision and epithelial tissue health. Adequate intake supports growth and development, while deficiency can lead to vision impairment and weakened immunity."
+            },
+            {
+              "id": "vitd",
+              "label": "Vitamin D",
+
+              "shortSummary": "Supports bone health.",
+              "longSummary": "Vitamin D regulates calcium and phosphorus absorption, making it essential for strong bones and teeth. It also supports immune function and muscle health. Deficiency can lead to bone disorders such as rickets in children and osteoporosis in adults."
+            },
+            {
+              "id": "vite",
+              "label": "Vitamin E",
+
+              "shortSummary": "Acts as an antioxidant.",
+              "longSummary": "Vitamin E protects cell membranes from oxidative damage by neutralizing free radicals. It supports immune function and helps maintain healthy skin and eyes. Adequate intake may reduce the risk of chronic diseases linked to oxidative stress."
+            },
+            {
+              "id": "vitk",
+              "label": "Vitamin K",
+
+              "shortSummary": "Important for blood clotting.",
+              "longSummary": "Vitamin K is essential for the synthesis of proteins involved in blood clotting and bone metabolism. It helps prevent excessive bleeding and supports bone strength. Deficiency can result in impaired clotting and increased risk of fractures."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

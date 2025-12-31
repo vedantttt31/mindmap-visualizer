@@ -1,0 +1,292 @@
+/* =========================================================
+   MODERN RESET & VARIABLE SYSTEM
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Light Theme - Sophisticated Slate & Indigo */
+  --bg: #f1f5f9;
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --canvas-bg: #f8fafc;
+  --grid-color: rgba(203, 213, 225, 0.4);
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  --accent: #4f46e5;
+  --accent-hover: #6366f1;
+  --success: #10b981;
+  --danger: #ef4444;
+  
+  --node-fill: #ffffff;
+  --node-stroke: #4f46e5;
+  --link-color: #cbd5e1;
+  
+  --border: rgba(226, 232, 240, 0.8);
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --glass-blur: blur(12px);
+  --radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg: #020617;
+  --panel-bg: rgba(15, 23, 42, 0.85);
+  --canvas-bg: #020617;
+  --grid-color: rgba(30, 41, 59, 0.5);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --accent: #818cf8;
+  --accent-hover: #a5b4fc;
+  
+  --node-fill: #1e293b;
+  --node-stroke: #818cf8;
+  --link-color: #334155;
+  
+  --border: rgba(51, 65, 85, 0.5);
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* =========================================================
+   LAYOUT & CANVAS
+========================================================= */
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+#mindmap {
+  flex: 1;
+  background-color: var(--canvas-bg);
+  background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+ 
+}
+
+/* =========================================================
+   FLOATING CONTROLS
+========================================================= */
+
+#top-bar {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* This controls the even spacing between all items */
+}
+
+#controls {
+    display: flex;
+    gap: 12px; /* Keeps the same spacing for buttons inside the controls div */
+}
+
+
+
+button {
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--text-main);
+  backdrop-filter: var(--glass-blur);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+#export-json {
+  background: var(--text-main);
+  color: var(--bg);
+}
+
+/* =========================================================
+   SVG ELEMENTS (NODES & LINKS)
+========================================================= */
+.link {
+  stroke: var(--link-color);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  transition: stroke 0.3s ease;
+}
+
+.node circle {
+  fill: var(--node-fill);
+  stroke: var(--node-stroke);
+  stroke-width: 3px;
+  cursor: pointer;
+  transition: r 0.3s ease, fill 0.3s ease, stroke-width 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+.node:hover circle {
+  r: 22;
+  stroke-width: 4px;
+}
+
+.node.selected circle {
+  stroke: var(--success);
+  fill: var(--success);
+}
+
+.node text {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--text-main);
+  text-shadow: 0 0 10px var(--canvas-bg);
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   SIDE PANEL (THE EDITOR)
+========================================================= */
+#side-panel {
+  width: 400px;
+  background: var(--panel-bg);
+  backdrop-filter: var(--glass-blur);
+  border-left: 1px solid var(--border);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.03);
+}
+
+#side-panel-header {
+  margin-bottom: 30px;
+}
+
+#theme-toggle {
+  width: 100%;
+  justify-content: center;
+  border-radius: 30px;
+  background: var(--accent);
+  color: white;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+#side-panel-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+  
+  
+}
+
+/* Summary Card Style */
+.summary-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.summary-text {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* Editor Style */
+#summary-edit textarea {
+  width: 100%;
+  min-height: 200px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+#summary-edit textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#delete-btn {
+  grid-column: span 2;
+  margin-top: 10px;
+  background: transparent;
+  color: var(--danger);
+  border-color: transparent;
+}
+
+#delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+/* Tooltip Styling */
+#tooltip {
+  position: fixed;
+  padding: 12px 18px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4);
+  z-index: 1000;
+  max-width: 250px;
+  pointer-events: none;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#side-panel-content > * {
+  animation: fadeIn 0.4s ease forwards;
+}

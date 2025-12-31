@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mindmap Visualizer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="top-bar">
+            <button id="reset-view">Reset View</button>
+            <div id="controls">
+                <button id="expand-all">Expand All</button>
+                <button id="collapse-all">Collapse All</button>
+                <button id="export-json">Export JSON</button>
+            </div>
+        </div>
+
+
+        <svg id="mindmap"></svg>
+
+        <div id="side-panel">
+            <div id="side-panel-header">
+                <button id="theme-toggle">🌙 Dark</button>
+            </div>
+
+            <div id="side-panel-content">
+                <p style="font-size: 15px;">Click a node to view or edit its summary.<br />
+                    Use <strong>Add Node</strong> to grow the map.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    <div id="tooltip"></div>
+
+</body>
+
+</html>
